@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mansha ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Trebuchet MS',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:linear-gradient(135deg,#ffd6e8,#fff0f6);
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+transition:1s;
+}
+
+#page2{
+transform:translateX(100%);
+background:linear-gradient(135deg,#ffcad4,#fff5f7);
+}
+
+h1{
+color:#ff4f87;
+margin-bottom:25px;
+}
+
+.teddy{
+position:relative;
+width:220px;
+height:300px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+.head{
+width:140px;
+height:130px;
+background:#b97a56;
+border-radius:50%;
+position:absolute;
+left:40px;
+top:0;
+}
+
+.ear{
+width:50px;
+height:50px;
+background:#b97a56;
+border-radius:50%;
+position:absolute;
+}
+
+.ear.left{left:20px;top:-10px;}
+.ear.right{right:20px;top:-10px;}
+
+.eye{
+width:10px;
+height:10px;
+background:black;
+border-radius:50%;
+position:absolute;
+top:50px;
+}
+
+.eye.left{left:45px;}
+.eye.right{right:45px;}
+
+.nose{
+width:18px;
+height:14px;
+background:#4a2d23;
+border-radius:50%;
+position:absolute;
+left:61px;
+top:68px;
+}
+
+.body{
+position:absolute;
+width:160px;
+height:150px;
+background:#b97a56;
+border-radius:50%;
+top:105px;
+left:30px;
+}
+
+.arm{
+width:35px;
+height:90px;
+background:#b97a56;
+position:absolute;
+border-radius:30px;
+top:120px;
+}
+
+.arm.left{
+left:5px;
+transform:rotate(20deg);
+}
+
+.arm.right{
+right:5px;
+transform:rotate(-20deg);
+}
+
+.leg{
+width:45px;
+height:70px;
+background:#b97a56;
+position:absolute;
+border-radius:30px;
+bottom:0;
+}
+
+.leg.left{left:45px;}
+.leg.right{right:45px;}
+
+.card{
+position:absolute;
+top:120px;
+left:45px;
+width:130px;
+height:75px;
+background:white;
+border-radius:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:8px;
+font-weight:bold;
+color:#ff4f87;
+font-size:14px;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.candy{
+margin-top:35px;
+background:#7b3f00;
+color:white;
+padding:16px 28px;
+border-radius:30px;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.candy:hover{
+transform:scale(1.08);
+background:#a0522d;
+}
+
+.love{
+font-size:50px;
+animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.15);}
+}
+
+.message{
+font-size:42px;
+color:#d6336c;
+font-weight:bold;
+text-align:center;
+max-width:900px;
+padding:30px;
+line-height:1.4;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+font-size:24px;
+animation:rise linear infinite;
+opacity:.8;
+}
+
+@keyframes rise{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page" id="page1">
+
+<h1>For Someone Very Special ❤️</h1>
+
+<div class="teddy">
+
+<div class="head">
+<div class="ear left"></div>
+<div class="ear right"></div>
+<div class="eye left"></div>
+<div class="eye right"></div>
+<div class="nose"></div>
+</div>
+
+<div class="body"></div>
+
+<div class="arm left"></div>
+<div class="arm right"></div>
+
+<div class="leg left"></div>
+<div class="leg right"></div>
+
+<div class="card">
+Mansha,<br>
+I have something to say
+</div>
+
+</div>
+
+<div class="candy" onclick="nextPage()">
+🍫 Unwrap me to know more
+</div>
+
+</div>
+
+<div class="page" id="page2">
+
+<div class="hearts" id="hearts"></div>
+
+<div class="love">❤️</div>
+
+<div class="message">
+I love you so much.<br><br>
+
+You're the most annoying thing that's ever happened to me 😂❤️<br><br>
+
+...and I wouldn't trade you for anything in this world.
+</div>
+
+</div>
+
+<script>
+
+function nextPage(){
+document.getElementById("page1").style.transform="translateX(-100%)";
+document.getElementById("page2").style.transform="translateX(0)";
+}
+
+function makeHeart(){
+
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+document.getElementById("hearts").appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(makeHeart,250);
+
+</script>
+
+</body>
+</html>
+
